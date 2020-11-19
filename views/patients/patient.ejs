@@ -1,0 +1,75 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+
+    <div class="patient-card">
+        <div class="patient-image">
+            <img src="..\images\patient-<%= patient.gender %>.png" alt="">
+        </div>
+
+        <div class="name-phone-patient">
+            <div class="patient-left">
+                <div class="name-patient"><%= patient.lastName + " " + patient.firstName %></div>
+            </div>
+            <a href="tel:<%= patient.phone %>">
+                <div class="patient-right">
+                    <img class="call-patient" src="..\images\call.png" alt="">
+                    <div class="number-patient"><%= patient.phone %></div>
+                </div>
+            </a>
+            
+        </div>
+
+        
+
+        <div class="line"></div>
+        <div class="observation-patient">
+            <% if(patient.observations) { %>
+                <%= patient.observations %>
+            <% }else{ %>
+                Nicio observație. 
+            <% } %>
+        </div>
+
+        <a href="/patients">
+            <div class="back-patient">
+                Înapoi
+            </div>
+        </a>
+        <div class="remove-delete">
+            <a href="<%= id %>/edit">
+                <div class="edit-patient-block">
+                    <img class="edit-remove-img" src="..\images\pencil.png" alt="">
+                </div>
+            </a>
+
+            
+            <div id="delete-image" class="delete-patient-block">
+                <form id="deleteForm" action="/patients/<%= id%>?_method=DELETE" method="POST"></form>
+                    <img  class="edit-remove-img" src="..\images\trash.png" alt="">   
+                </form>
+            </div>
+            
+
+        </div>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="/scripts/confirmPopup.js"></script>
+
+<script>
+    document.querySelector('#delete-image').addEventListener('click', () => {
+        Confirm.open({
+            title: 'Ștergere Pacient',
+            message: 'Ești sigur(ă) că vrei să ștergi acest pacient?',
+            okText: 'Da',
+            cancelText: 'Anulare',
+            onok: () => document.getElementById("deleteForm").submit(),
+            oncancel: () => console.log('Action canceled.')
+        });
+    });
+</script>
+
+<%- include("../partials/footer") %>

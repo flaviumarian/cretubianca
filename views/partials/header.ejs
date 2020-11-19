@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Bianca Cretu</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom CSS scripts -->
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/navigation.css">
+    <link rel="stylesheet" href="/stylesheets/patients.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/patient.css">
+    <link rel="stylesheet" href="/stylesheets/popup.css">
+    <link rel="stylesheet" href="/stylesheets/search.css">
+    <link rel="stylesheet" href="/stylesheets/landing.css">
+    
+
+    
+</head>
+<body>
+
+    <nav class="main-nav">
+        <input type="checkbox" id="check">
+        <label for="check" class="main-nav-burger">
+            <i class= "fa fa-bars"></i>
+        </label>
+        <a href="/"><label class="main-nav-title">Bianca Crețu</label></a>
+
+        <a href="/"><img src="\images\logo_bc.png" alt=""></a>
+
+        <ul id="list" class="main-nav-options">
+
+            <li class="main-nav-option"><a class="main-nav-option-link <%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %>" href="/">Acasă</a></li>
+            
+            <% if(typeof user !== 'undefined' && !user){ %>
+                <li class="main-nav-option"><a class="main-nav-option-link <%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>" href="/login">Autentificare</a></li>
+                <li class="main-nav-option"><a class="main-nav-option-link <%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>" href="/register">Înregistrare</a></li>
+            <% } else { %>
+                <li class="main-nav-option"><a class="main-nav-option-link <%= typeof page !== 'undefined' && page === 'patient' ? 'active' : '' %>" href="/patients">Pacienți</a></li>
+                <li class="main-nav-option"><a class="main-nav-option-link" href="/logout">Deconectare</a></li>
+            <% } %>
+            
+        </ul>
+    </nav>
+
+    <% if(typeof error !== 'undefined' && error && error.length > 0){ %>
+		<div id="fail" class="flash-card-danger">
+				<%= error %>
+		</div>
+	<% } %>
+		
+	<% if(typeof success !== 'undefined' &&success && success.length > 0){ %>
+		<div id="succ" class="flash-card-success">		
+			<%= success %>
+		</div>
+    <% } %>
+    
+    <script>
+        var flashCardDanger = document.getElementById("fail");
+        var flashCardSuccess = document.getElementById("succ");
+
+        if(flashCardDanger){
+            let removeFailed = setTimeout(function remove() {
+                flashCardDanger.classList.add("flash-card-eliminate");
+                let removeIt = setTimeout(function remov(){
+                    flashCardDanger.remove();  
+                }, 1000); 
+            }, 3000)
+        }
+        if(flashCardSuccess){
+            let removeSuccess = setTimeout(function remove() {
+                flashCardSuccess.classList.add("flash-card-eliminate");
+                let removeIt = setTimeout(function remov(){
+                    flashCardSuccess.remove();  
+                }, 1000);
+            }, 3000)
+        }
+    
+    </script>
+
+    <script>
+        document.getElementById("check").onclick = function(){
+            var list = document.getElementById("list");
+            if(list.style.height === "100vh"){
+                list.style.removeProperty('height');
+            }else{
+                list.style.height = "calc(100vh - 80px)";
+            }
+        };
+
+       
+    </script>
+    

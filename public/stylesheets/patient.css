@@ -1,0 +1,254 @@
+.patient-card{
+    position: relative;
+    width: 90%;
+    margin-top: 4rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #fff;
+    box-shadow: 0px 0.25px 1px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    padding-bottom: 2rem;
+}
+
+.patient-image{
+    position: absolute;
+    margin-left: -1.5rem;
+    margin-top: -1.5rem;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    background: #fff;
+    width: 7rem;
+    height: 7rem;
+    z-index: 0.5;
+    border-radius: 50%;
+}
+
+.patient-image img{
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-left: -0.25rem;
+    padding-bottom: 0.75rem;
+}
+
+.name-phone-patient{
+    display: inline-block;
+    width: 100%;
+}
+
+.patient-left{
+    float: left;
+}
+
+.patient-right{
+    float: right;
+}
+
+.name-patient{
+    font-size: 1.75rem;
+    padding-top: 6rem;
+    padding-left: 3rem;
+    text-align: left;
+}
+
+.call-patient{
+    display: inline-block;
+    margin-top: 6rem;
+    width: 35px;
+    height: 35px;
+    margin-bottom: -0.5rem;
+}
+
+.number-patient{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-right: 3rem;
+    font-size: 1.2rem;
+}
+
+.line{
+    height: 1px;
+    width: 100%-3rem;
+    margin: 0 3rem;
+    background-color: rgba(74, 71, 71, 0.6);
+}
+
+.observation-patient{
+    text-align: left;
+    margin: 1rem 3rem;
+}
+
+.back-patient{
+    text-align: left;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    margin-bottom: -0.5rem;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.remove-delete{
+    position: absolute;
+    right: 0;   
+    margin-top: -0.5rem;
+}
+
+
+
+.edit-patient-block{
+    height: 90px;
+    width: 90px;
+    display: inline-block;
+    margin-right: 1rem;
+    background-color: #fff;
+    box-shadow: 0px 0.25px 1px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.delete-patient-block{
+    display: inline-block;
+    height: 90px;
+    width: 90px;
+    margin-right: 1rem;
+    background-color: #fff;
+    box-shadow: 0px 0.25px 1px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.delete-patient-block:hover{
+    cursor: pointer;
+}
+
+.edit-remove-img{
+    width: 50px;
+    height: 50px;
+    margin-top: 1.25rem;
+}
+
+
+
+@media (max-width: 700px){
+
+    .patient-image{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .patient-image img{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .name-patient{
+        padding-top: 5rem;
+        font-size: 1.25rem;
+    }
+
+    .call-patient{
+        width: 25px;
+        height: 25px;
+        margin-top: 5rem;
+    }
+
+    .number-patient{
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .observation-patient{
+        font-size: 0.8rem;
+    }
+
+    .back-patient{
+        font-size: 0.9rem;
+    }
+
+    .remove-delete{ 
+        margin-top: -0.25rem;
+    }
+    
+
+    .edit-patient-block{
+        height: 60px;
+        width: 60px;
+    }
+
+    .delete-patient-block{
+        height: 60px;
+        width: 60px;
+    }
+
+    .edit-remove-img{
+        width: 40px;
+        height: 40px;
+        margin-top: 0.8rem;
+    }
+}
+
+@media (max-width: 550px){
+
+    .patient-image{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .patient-image img{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .name-patient{
+        padding-top: 4rem;
+        padding-left: 2rem;
+    }
+
+
+    .call-patient{
+        width: 20px;
+        height: 20px;
+        margin-top: 4.5rem;
+        padding-bottom: 0.25rem;
+    }
+
+
+    .number-patient{
+        font-size: 0.95rem;
+        margin-bottom: 0.15rem;
+        margin-right: 2rem;
+    }
+
+    .line{
+        width: 100%-2rem;
+        margin: 0 2rem;
+    }
+
+    .observation-patient{
+        font-size: 0.8rem;
+        margin: 1rem 2rem;
+    }
+
+    .back-patient{
+        font-size: 0.8rem;
+        margin-left: 2rem;
+    }
+
+    .remove-delete{ 
+        margin-top: 0rem;
+    }
+
+    .edit-patient-block{
+        height: 50px;
+        width: 50px;
+    }
+
+    .delete-patient-block{
+        height: 50px;
+        width: 50px;
+    }
+
+    .edit-remove-img{
+        width: 30px;
+        height: 30px;
+        margin-top: 0.75rem;
+    }
+}

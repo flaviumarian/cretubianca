@@ -1,0 +1,23 @@
+.title{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.access-patients{
+    margin-top: 1rem;
+}
+
+.landing-img{
+    width: 70%;
+    height: 70%;
+}
+
+.access-patients a{
+    font-weight: 600;
+}
+
+.sub-title{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: -4.5rem;
+}

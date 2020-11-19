@@ -1,0 +1,176 @@
+.message-title{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+}
+
+.add-search-panel{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.add-patient{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+.search-text{
+    text-align: left;
+}
+
+.search-text span{
+    font-weight: 600;
+}
+
+
+.patient-block{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin-top: 0.75rem;
+    background-color: white;
+    box-shadow: 0px 0.5px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.left {
+    height: 80px;
+    width: 50%;
+    float: left;
+}
+
+.patient-name{
+    position: relative;
+    font-size: 1.1rem;
+    text-align: left;
+    margin-left: 5rem;
+    padding-top: 1.75rem   
+}
+
+.right{
+    height: 80px;
+    width: 50%;
+    float: right;
+}
+
+.img-patient{
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 2.5%;
+}
+
+
+.right-left{
+    position: relative;
+    width: 70%;
+    height: 80px;
+    float: left;
+}
+
+.right-left-rest{
+    width: 100%;
+    height: 100%;
+}
+
+.right-right{
+    width: 30%;
+    height: 80px;
+    float: right;
+}
+
+.img-call{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+} 
+
+.patient-phone{
+    position: relative;
+    font-size: 1.1rem;
+    text-align: start;
+    margin-top: 1.75rem;
+    margin-right: 0.5rem;
+    
+}
+
+
+
+@media (max-width: 1250px){
+    .right-left{
+        width: 60%;
+    }
+    
+    .right-right{
+        width: 40%;
+    }
+}
+
+@media (max-width: 965px){
+    .right-left{
+        width: 65%;
+    }
+    
+    .right-right{
+        width: 35%;
+    }
+} 
+
+@media (max-width: 750px){
+    .right-left{
+        width: 55%;
+    }
+    
+    .right-right{
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px){
+
+    .message-title{
+        text-align: left;
+    }
+
+    .right-left{
+        width: 58%;
+    }
+    
+    .right-right{
+        width: 42%;
+    }
+
+    .patient-name {
+        font-size: 0.9rem;
+        margin-left: 4rem;
+        padding-top: 2rem;
+    }
+
+    .img-patient{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .img-call{
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .patient-phone{
+        font-size: 0.9rem;
+        margin-top: 2rem;
+    }
+}
+
+

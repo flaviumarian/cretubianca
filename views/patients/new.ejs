@@ -1,0 +1,75 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+
+     <div class="form">
+
+        <div class="form-title">
+            Pacient nou
+        </div>
+
+        <form action="/patients" method="POST">
+
+            <!-- Last Name -->
+            <div class="form-input-element-patient">
+                <label class="form-input-label tooltip" for="lastName">Nume*<span class="tooltiptext">Câmp obligatoriu</span></label>
+                <textarea class="form-input-textarea" name="lastName" rows="1" required oninvalid="this.setCustomValidity('Introduceți numele pacientului')"
+                oninput="this.setCustomValidity('')" placeholder="Nume"></textarea>                
+            </div>
+
+            <!-- First Name -->
+            <div class="form-input-element-patient">
+                <label class="form-input-label tooltip" for="firstName">Prenume*<span class="tooltiptext">Câmp obligatoriu</span></label>            
+                <textarea class="form-input-textarea" name="firstName" rows="1" required oninvalid="this.setCustomValidity('Introduceți prenumele pacientului')"
+                oninput="this.setCustomValidity('')" placeholder="Prenume"></textarea>                
+            </div>
+
+            <!-- Phone -->
+            <div class="form-input-element-patient">
+                <label class="form-input-label tooltip" for="phone">Telefon*<span class="tooltiptext">Câmp obligatoriu</span></label>
+                <input class="form-input-textarea" type="tel" id="phone" name="phone" pattern="[0-9]{10}" required oninvalid="this.setCustomValidity('Introduceți numărul de telefon al pacientului format din 10 cifre, fara - sau spatii')"
+                placeholder="Telefon">
+            </div>
+             
+            <!-- Observations -->
+            <div class="form-input-element-patient">
+                <label class="form-input-label" for="observations">Observații</label>
+                <textarea class="form-input-textarea" name="observations" rows="3" placeholder="Observații"></textarea>                
+            </div>
+
+            <!-- Sex -->
+            <div class="form-input-element-patient">
+                <label class="form-input-label" for="sex">Sex</label>
+                
+                <div class="input-checkbox">
+                    <input class="form-input-radio" type="radio" id="male" name="gender" value="male">
+                    <label for="male"><span><span></span></span>Masculin </label>
+                </div>
+                
+                <div class="input-checkbox">
+                    <input class="form-input-radio" type="radio" id="female" name="gender" value="female">
+                    <label for="female"><span><span></span></span>Feminin </label>    
+                </div>
+                
+                <div class="input-checkbox">
+                    <input class="form-input-radio" type="radio" id="neutral" name="gender" value="neutral" checked>
+                    <label for="neutral"><span><span></span></span>Nespecificat</label>
+                </div>
+                
+            </div>
+
+            
+            <button class="form-submit">Adăugare</button>   
+                         
+        </form>
+
+        <div class="form-return">
+            <a href="javascript:history.back()">Înapoi</a>  
+        </div>
+    </div> 
+
+</div>
+
+
+<script type="text/javascript" src="/scripts/resizeTextAreas.js"></script>
+<%- include("../partials/footer") %>

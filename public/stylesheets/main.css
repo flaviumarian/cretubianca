@@ -1,0 +1,352 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "montserrat";
+}
+
+
+body{
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    font-family: Montserrat;
+    color: #1E3231;
+    background-color: #DDFDFE;
+}
+
+
+
+.container{
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding-bottom: 15rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* ================================================== */
+/* FORMS */
+/* ================================================== */
+.form{
+    background: rgb(37, 111, 95);
+    padding: 5%;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.form-title{
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: semi-bold;
+    color:white;
+}
+
+/* .form-social-media{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-social-media .item{
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #eeeeee;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 50%;
+    color: #eeeeee;
+    transition: all 0.5s ease;
+}
+
+.form-social-media .item-facebook:hover{
+    border-color: #4267B2;
+    color: #4267B2;
+    background-color: #fff;
+}
+
+.form-social-media .item-twitter:hover{
+    border-color: #1DA1F2;
+    color: #1DA1F2;
+    background-color: #fff;
+}
+
+.form-social-media .item-google:hover{
+    border-color: #DB4437;
+    color: #DB4437;
+    background-color: #fff;
+} */
+
+/* Login */
+.form-input-element {
+    position: relative;
+    width: 50%;
+    margin: 10px auto;
+    justify-content: center;
+}
+
+/* Single line input */
+.form-input-element .form-input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 35px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+/* Patient */
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+ 
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #01A683;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 0.8rem;
+
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+ }
+
+.tooltip:hover .tooltiptext {
+ visibility: visible;
+}
+
+
+.form-input-element-patient {
+    position: relative;
+    width: 75%;
+    margin: 10px auto;
+    justify-content: center;
+    transition: 0.8s;
+}
+
+.form-input-label{
+    margin-right: 90%;
+}
+
+.form-input-element-patient .form-input-textarea{
+    resize: none;
+    width: 100%;
+    padding: 12px;
+    padding-left: 15px;
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+
+/* Submit */
+.form-submit{
+    outline: none;
+    width: 30%;
+    border: 1px solid #fff;
+    background: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    z-index: 0;
+    margin: 5px;
+    margin-top: 30px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.form-submit:hover{
+    color: #43658b;
+    border: 0.5px solid #fff;  
+}
+
+
+.form-submit::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    transition: 0.8s;
+    z-index: -2;
+}
+
+
+.form-submit:hover::before{
+    height: 200%;
+}
+
+
+/* Radio buttons */
+.input-checkbox{
+    display: inline;
+    margin-top: 0.5rem;
+    text-align: left;
+    transition: 0.8s;
+}
+
+.form-input-radio:checked, 
+.form-input-radio:not(:checked){
+    position: relative;
+    opacity: 0;
+}
+
+.form-input-radio:checked + label, 
+.form-input-radio:not(:checked) + label{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color:#fff;
+}
+
+.form-input-radio:checked + label:before, 
+.form-input-radio:not(:checked) + label:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+
+.form-input-radio:checked + label:after,
+.form-input-radio:not(:checked) + label:after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: rgb(37, 111, 95);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.form-input-radio:not(:checked) + label:after{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.form-input-radio:checked + label:after{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+
+
+
+
+.form-input-element i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #1d2120;
+    font-size: 18px;
+}
+
+
+::-webkit-input-placeholder{
+    color: #1d2120;
+}
+
+
+.form-return{
+    margin-top: 10px;
+}
+
+
+/* Page change animation */
+ .container, footer{
+    animation: transitionIn 0.7s;
+} 
+
+
+@keyframes transitionIn{
+    
+    from{
+        opacity: 0;
+        /* transform: rotateX(-10deg); */
+        transform: translateY(-10px);
+    }
+    
+    to {
+        opacity: 1;
+        /* transform: rotateX(0deg); */
+        transform: translateY(0px);
+        
+    }
+    
+}
+
+
+@media (max-width: 965px){
+    .form-title{
+        font-size: 1.5rem;
+    }
+    
+    /* .form-social-media .item{
+        width: 1.7rem;
+        height: 1.7rem;
+        line-height: 1.7rem;
+        font-size: 0.8rem;
+    } */
+    
+    .form-input-element{
+        width: 75%;
+    }
+
+    .input-checkbox{
+        display: block;
+        font-size: 0.9rem;
+    }
+
+    
+    
+    .form-submit{
+        width: 50%;
+    }
+    
+}
+
+

@@ -1,0 +1,125 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+
+    <div class="top-panel">
+      <% if(patients.length > 0 || typeof searched !== 'undefined'){ %>
+         <div class="message-title">Pacienții mei</div>
+         <form id="searchForm" action="/patients/" method="GET">
+
+         <div class="add-search-panel">
+            <a href="/patients/new"><img class="add-patient" src="..\images\add_patient.png" alt=""></a>
+
+
+            <input id="search-field" class="search-input" type="text" placeholder="Căutare pacient..." required>
+            <span id="clear">
+               <i class="fa fa-times" aria-hidden="true"></i>
+             </span>        
+
+            <img id="search-button" class="add-patient" src="..\images\search.png" alt="">
+         </div>
+      </form>
+      <% }else{ %>
+         <div class="message-title">Niciun pacient înregistrat</div>
+         <a href="/patients/new"><img class="add-patient" src="..\images\add_patient.png" alt=""></a>
+      <% } %>
+    </div>
+
+    <% if(typeof searched !== 'undefined'){ %>
+      <div class="search-text">Rezultat căutare după: <span><%= searched %></span></div>
+      <% if(patients.length === 1){ %>
+         <div class="search-text search-result"><span>1</span> rezultat găsit </div>
+      <% }else {%>
+         <div class="search-text search-result"><span><%= patients.length %></span> rezultate găsite </div>
+      <% } %>
+    <% } %>
+
+    <% if(patients.length > 0){ %>
+
+      <% for(let i=0; i<patients.length; i++){ %>
+      
+         <!-- Pacient -->
+         <div class="patient-block">
+         <a href="/patients/<%= keys[i]%>">
+            <div class="left">
+               <img class="img-patient" src="..\images\patient-<%= patients[i].gender %>.png" alt="">
+               <div class="patient-name"><%= patients[i].lastName + " " + patients[i].firstName %></div>
+            </div>
+         </a>
+            <div class="right">
+               
+               <div class="right-left">
+                  <a href="/patients/<%= keys[i]%>">
+                     <div class="right-left-rest"></div>
+                  </a>
+                  <a href="tel:<%= patients[i].phone %>">
+                     <img class="img-call" src="..\images\call.png" alt="">
+                  </a>
+               </div>
+
+               <a href="tel:<%= patients[i].phone%>">
+                  <div class="right-right">
+                     <div class="patient-phone"><%= patients[i].phone %></div> 
+                  </div>
+               </a>
+
+           </div>
+         
+         </div>
+      <% } %>
+      
+
+   <% } %>
+
+</div>
+
+<script>
+   
+   var search      = document.getElementById("search-button"),
+       searchField = document.getElementById("search-field"),
+       clear       = document.getElementById("clear"),
+       searchForm  =  document.getElementById("searchForm");
+
+   search.addEventListener("click", function() {
+   
+      if(!searchField.classList.contains("show-search-input")){
+         // show
+         searchField.classList.add("show-search-input");
+         searchField.classList.remove("hide-search-input");
+         clear.classList.remove("hide-search-clear");
+         clear.classList.add("show-search-clear");
+         search.style.marginLeft = "1rem";
+
+      }else{
+
+         if(searchField.value === ''){
+            // hide
+            searchField.classList.remove("show-search-input");
+            searchField.classList.add("hide-search-input");
+            clear.classList.remove("show-search-clear");
+            clear.classList.add("hide-search-clear");
+            search.style.marginLeft = "0rem";
+
+         }else{
+            // search
+            searchForm.action = "/patients/search=" + searchField.value;
+
+            searchForm.submit();
+         }
+      }
+   });
+
+   // clear text
+   clear.addEventListener("click", function(){
+      searchField.value= "";      
+   });
+
+   searchField.addEventListener("keyup", function(event) {
+      if(event.keyCode === 13){
+         search.click();
+      }
+   });
+
+</script>
+
+<%- include("../partials/footer") %>
