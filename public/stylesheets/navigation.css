@@ -148,7 +148,6 @@
         left: 50%;
     }
 
-
     .main-nav-title{
         font-size: 25px;
     }
@@ -192,4 +191,11 @@
         left: 0;
     }
 
+}
+
+@media (max-width: 600px){
+    .main-nav-title{
+        font-size: 20px;
+        margin-left: -1rem;
+    }
 }

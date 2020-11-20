@@ -140,15 +140,20 @@
 @media (max-width: 600px){
 
     .message-title{
-        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .add-patient{
+        width: 35px;
+        height: 35px;
     }
 
     .right-left{
-        width: 58%;
+        width: 55%;
     }
     
     .right-right{
-        width: 42%;
+        width: 45%;
     }
 
     .patient-name {
