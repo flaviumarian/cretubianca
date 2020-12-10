@@ -148,7 +148,12 @@ a:hover {
 }
 
 .form-input-label{
-    margin-right: 90%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+    
 }
 
 .form-input-element-patient .form-input-textarea{

@@ -31,6 +31,36 @@
             <% } %>
         </div>
 
+        <% if(patient.patientChart) { %>
+            <div class="patient-subheading">
+                Fișă Pacient
+            </div>
+            <div class="line line-subheading"></div>
+            <div class="observation-patient">
+                <%= patient.patientChart %>
+            </div>
+        <% } %>
+
+        <% if(patient.treatmentPlan) { %>
+            <div class="patient-subheading">
+                Plan de Tratament
+            </div>
+            <div class="line-subheading"></div>
+            <div class="observation-patient">
+                <%= patient.treatmentPlan %>
+            </div>
+        <% } %>
+
+        <% if(patient.oldTreatments) { %>
+            <div class="patient-subheading">
+                Tratamente Efectuate
+            </div>
+            <div class="line line-subheading"></div>
+            <div class="observation-patient">
+                <%= patient.oldTreatments %>
+            </div>
+        <% } %>
+
         <a href="/patients">
             <div class="back-patient">
                 Înapoi

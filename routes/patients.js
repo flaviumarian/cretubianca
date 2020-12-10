@@ -83,6 +83,19 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     if(req.body.observations && req.body.observations != ""){
         patient.observations = req.body.observations;
     }
+
+    if(req.body.patientChart && req.body.patientChart != ""){
+        patient.patientChart = req.body.patientChart;
+    }
+
+    if(req.body.treatmentPlan && req.body.treatmentPlan != ""){
+        patient.treatmentPlan = req.body.treatmentPlan;
+    }
+
+    if(req.body.oldTreatments && req.body.oldTreatments != ""){
+        patient.oldTreatments = req.body.oldTreatments;
+    }
+
     
     patient.gender = req.body.gender;
     
