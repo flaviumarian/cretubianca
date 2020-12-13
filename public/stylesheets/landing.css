@@ -1,4 +1,5 @@
 .title{
+    margin-top: 2rem;
     font-size: 2rem;
     font-weight: 500;
 }
@@ -7,10 +8,6 @@
     margin-top: 1rem;
 }
 
-.landing-img{
-    width: 70%;
-    height: 70%;
-}
 
 .access-patients a{
     font-weight: 600;
@@ -21,3 +18,80 @@
     font-weight: 300;
     margin-top: -4.5rem;
 }
+
+
+/* Slideshow container */
+.slideshow-container {
+    box-sizing:border-box;
+    max-width: 1000px;
+    position: relative;
+    margin: 0;
+    text-align: left;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    transition: 1s;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
