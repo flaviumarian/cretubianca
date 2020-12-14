@@ -26,8 +26,8 @@
 
             <!-- Phone -->
             <div class="form-input-element-patient">
-                <label class="form-input-label tooltip" for="phone">Telefon*<span class="tooltiptext">Câmp obligatoriu</span></label>
-                <input class="form-input-textarea" type="tel" id="phone" name="phone" pattern="[0-9]{10}" required oninvalid="this.setCustomValidity('Introduceți numărul de telefon al pacientului format din 10 cifre, fara - sau spatii')"
+                <label class="form-input-label" for="phone">Telefon</label>
+                <input class="form-input-textarea" type="tel" id="phone" name="phone" pattern="[0-9]{10}" oninvalid="this.setCustomValidity('Introduceți numărul de telefon al pacientului format din 10 cifre, fara - sau spatii')"
                 placeholder="Telefon" value="<%= patient.phone %>">
             </div>
              

@@ -11,12 +11,15 @@
             <div class="patient-left">
                 <div class="name-patient"><%= patient.lastName + " " + patient.firstName %></div>
             </div>
-            <a href="tel:<%= patient.phone %>">
-                <div class="patient-right">
-                    <img class="call-patient" src="..\images\call.png" alt="">
-                    <div class="number-patient"><%= patient.phone %></div>
-                </div>
-            </a>
+            <% if(patient.phone !== ''){ %>
+                <a href="tel:<%= patient.phone %>">
+                    <div class="patient-right">
+                        <img class="call-patient" src="..\images\call.png" alt="">
+                        <div class="number-patient"><%= patient.phone %></div>
+                    </div>
+                </a>
+            <% } %>
+            
             
         </div>
 
