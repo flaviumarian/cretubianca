@@ -40,12 +40,15 @@
       
          <!-- Pacient -->
          <div class="patient-block">
+
          <a href="/patients/<%= keys[i]%>">
             <div class="left">
                <img class="img-patient" src="..\images\patient-<%= patients[i].gender %>.png" alt="">
                <div class="patient-name"><%= patients[i].lastName + " " + patients[i].firstName %></div>
             </div>
          </a>
+
+         <% if(patients[i].phone !== ''){ %>
             <div class="right">
                
                <div class="right-left">
@@ -56,14 +59,17 @@
                      <img class="img-call" src="..\images\call.png" alt="">
                   </a>
                </div>
-
-               <a href="tel:<%= patients[i].phone%>">
-                  <div class="right-right">
-                     <div class="patient-phone"><%= patients[i].phone %></div> 
-                  </div>
-               </a>
-
+                  <a href="tel:<%= patients[i].phone%>">
+                     <div class="right-right">
+                        <div class="patient-phone"><%= patients[i].phone %></div> 
+                     </div>
+                  </a>
            </div>
+         <% }else{ %>
+            <a href="/patients/<%= keys[i]%>">
+               <div class="right"></div>
+            </a>
+         <% } %>
          
          </div>
       <% } %>
